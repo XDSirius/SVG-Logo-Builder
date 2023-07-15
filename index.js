@@ -1,5 +1,5 @@
 const inquirer = require('inquirer');
-const shapes = require('./lib/shapes.js');
+const {Circle,Triangle,Square} = require('./lib/shapes.js'); //object deconstructing
 const fs = require('fs');
 
 
@@ -19,12 +19,25 @@ const promptUser = () =>{
             {
                 type: 'list',
                 name : "shape",
-                message: (["Circle" , "Square" , "Triangle"]),
+                message:"What shape do you want?",
+                choices: (["Circle" , "Square" , "Triangle"]),
             },
+            {
+                type:'input',
+                name:"textColor",
+                message:"text color?",
+            }
 
         ])
         .then(res => {
-            writeToFile(res)
+            let shape 
+            if(res.shape==="Circle"){
+                shape = new Circle(res.characters,res.textColor,res.color)
+
+            }
+            console.log(shape);
+            console.log(shape.render)
+            fs.writeFileSync("./examples/logo.svg",shape.render())
         })
         
     };
