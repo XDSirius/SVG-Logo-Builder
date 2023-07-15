@@ -1,5 +1,5 @@
 const inquirer = require('inquirer');
-const generateSVGLogo = require('./examples/');
+const shapes = require('./lib/shapes.js');
 const fs = require('fs');
 
 
