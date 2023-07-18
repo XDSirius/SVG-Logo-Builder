@@ -34,10 +34,17 @@ const promptUser = () =>{
             if(res.shape==="Circle"){
                 shape = new Circle(res.characters,res.textColor,res.color)
 
+            }else if(res.shape==="Square"){
+                    shape = new Square(res.characters,res.textColor,res.color)
+                
+            }else
+                if(res.shape==="Triangle"){
+                    shape = new Triangle(res.characters,res.textColor,res.color)
             }
             console.log(shape);
             console.log(shape.render)
             fs.writeFileSync("./examples/logo.svg",shape.render())
+        
         })
         
     };
