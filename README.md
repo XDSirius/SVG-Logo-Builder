@@ -8,6 +8,8 @@ After cloning this repo, the only installation needed is to use npm i inquirer@8
 ## Usage
 To use this CLI program, once the program has been invoke then follow the prompts and select your choices. A logo will then generate under the examples folder.
 
+https://watch.screencastify.com/v/EVmjTUmZ0Y0BKvBa8FzU
+
 ## Credits
 The University of Minnessota's instructor, TA's, learning assistants, and tutor. 
 
